@@ -1,0 +1,242 @@
+#+TITLE:     Mesh networks over LoRa
+#+AUTHOR:    Dionysis Grigoropoulos
+#+EMAIL:     dgrig@erethon.com
+#+DATE:      2023-10-21
+#+LANGUAGE:  en
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [17pt]
+#+BEAMER_FRAME_LEVEL: 2
+#+BEAMER_THEME: Flip[bigpagenumber, topline=true, bullet=circle]
+#+OPTIONS: toc:nil
+#+latex_header: \usepackage{svg}
+
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor{alerted text}{fg=black}
+
+* Who am I
+- https://f.erethon.com/mesh2023.pdf
+- dgrig/Erethon
+- Infrastructure / Automation / Security / Tinkering
+- email: dgrig@erethon.com
+- matrix: @dgrig:erethon.com
+* We're gonna speedrun over these topics
+- Mesh networks
+- LoRa and modulation schemes
+- LoRa over "cheap" ESP32 based boards
+- Software to create mesh networks over LoRa
+  - Meshtastic
+  - Reticulum
+* Mesh Networks
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} Mesh Networks \par
+* Mesh Networks
+- In a mesh network nodes connect directly to each other when possible, in a
+  dynamic and non-hierrarchical manner. No central orchestration.
+#+BEAMER: \pause
+- Multiple paths between nodes
+#+BEAMER: \pause
+#+LaTeX:\includesvg[width=130pt]{NetworkTopology-Mesh}
+* Why mesh networking?
+- All participants of the network are equal!
+#+BEAMER: \pause
+- Get around unreliable infrastructure
+#+BEAMER: \pause
+- Emergency Communications, Events, areas with no other coverage (hiking)
+#+BEAMER: \pause
+- A thing of the past?
+#+BEAMER: \pause
+- Internet of Things depends on meshing
+* LoRa
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} LoRa (Long Range) \par
+* LoRa vs LoRaWAN
+- LoRa is a **proprietary** "radio communication technique"
+  - Designed by Cycleo, bought by Semtech
+  - Essentially it's a proprietary modulation scheme based on Chirp Spread
+    Spectrum
+#+BEAMER: \pause
+- LoRaWAN is an ITU standard that builds on top of LoRa
+  - Supported by LoRa Alliance, open(?) and non-profit association with the aim
+    of supporting and advancing LoRaWAN
+#+BEAMER: \pause
+- These two together define the low power wide area network (LPWAN) LoRa
+* LoRa Basics
+- Chirp Spread Spectrum, sorry what?
+#+BEAMER: \pause
+#+LaTeX:\includegraphics[width=270pt]{bw.jpg}
+* LoRa Basics
+#+LaTeX:\includegraphics[width=270pt]{lora-bw.jpg}
+* LoRa Basics
+- License free bands (433, 863-870MHz in Europe)
+#+BEAMER: \pause
+- Very low power, resistant to noise
+  - Bluetooth: 2.5mW, 10m
+  - WiFi: 80mW, 50m
+  - LoRa: depends on settings,
+          5mW, 2km
+#+BEAMER: \pause
+- Data rate: 11bps to 21.88kbps
+* LoRa Basics
+- Bandwidth, 7.8kHz up to 500kHz, in reality 125-500kHz
+#+BEAMER: \pause
+- Spreading Factor, 6-12, practically 7-12
+  - Smaller = faster, higher = resistance to noise
+  - Doubling of time on air
+- These are physical characteristics of the signal
+#+BEAMER: \pause
+- Coding rate, ratio of data bits to transmission bits
+#+BEAMER: \pause
+- Legislation is a bit weird (power, duty cycle)
+* Video
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} Video \par
+* How to transmit/receive LoRa
+- LoRa ICs (~2$), hats, development boards
+#+BEAMER: \pause
+- SDR (Software Defined Radio)!
+* LoRa Boards
+#+LaTeX:\includegraphics[width = 275pt\textwidth]{tbeam.jpeg}
+* LoRa Boards
+#+LaTeX:\includegraphics[width = 275pt\textwidth]{boards.jpeg}
+* Meshtastic
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} \includegraphics[width = 300pt\textwidth]{meshtastic.jpg}  \par
+* Meshtastic
+- Open Source (GPLv3), off-grid, mesh network
+#+BEAMER: \pause
+- ProtoBuff for serialization
+  - Allows for easy cross platform development
+#+BEAMER: \pause
+- Firmware
+#+BEAMER: \pause
+- Apps that consume these ProtoBuff definitions
+  - Mobile applications
+  - Python CLI
+  - Web
+* Meshtastic - Features
+- Single "channel" for all devices in a mesh
+  - AES256 PSK (pre-shared key) shared between all nodes
+  - Chat room with all participants
+  - "1-1" rooms
+#+BEAMER: \pause
+- Support for automatic querying of sensors
+  - GPS
+  - I2C (temp, humidity, etc)
+#+BEAMER: \pause
+- Bridging to MQTT for "tunneling" Meshtastic over TCP/IP
+#+BEAMER: \pause
+- Longest range contact 254km!
+* Meshtastic
+- Networks
+    - Canadian Network
+    - [[https://austinmesh.org/][Austin Mesh]]
+- [[https://canvis.app/meshtastic-map][Map of nodes]] (1540 entries)
+- Simple routing protocol, 3 hops by default
+- GitHub & Discord
+* Meshtastic
+#+LaTeX:\begin{columns}[t]
+    #+LaTeX:\begin{column}[T]{5.5cm}
+    #+LaTeX:\includegraphics[height = 220pt\textwidth]{meshtastic-map.jpeg}
+    #+LaTeX:\end{column}
+
+    #+LaTeX:\begin{column}[T]{5.5cm}
+    #+LaTeX:\includegraphics[height = 220pt\textwidth]{meshtastic-chat.jpeg}
+    #+LaTeX:\end{column}
+#+LaTeX:\end{columns}
+* Meshtastic
+#+LaTeX:\includegraphics[width = 275pt\textwidth]{tbeam-penteli.jpg}
+* Reticulum
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} \includegraphics[width = 150pt\textwidth]{reticulum_logo_512.png} \par
+* Reticulum
+- ""Cryptography based networking stack for building local and wide-area networks
+  using simple hardware. Reticulum is not one network. It is a tool for building
+  thousands of networks.""
+#+BEAMER: \pause
+- It works over Ethernet / WiFi / TCP/IP / I2P / LoRa
+#+BEAMER: \pause
+- MIT Licensed
+* Reticulum
+- End-to-end encrypted and end-to-end connectivity
+#+BEAMER: \pause
+- Forward Secrecy
+#+BEAMER: \pause
+- Portability of addresses
+#+BEAMER: \pause
+- Bandwidth aware interfaces
+* Reticulum
+- Python reference implementation
+  - C++ implementation by the community in the works
+  - Some interest in a Rust implementation
+#+BEAMER: \pause
+- Because it's written in Python and you can't run Python in microcontrollers,
+  you need another device to do the heavy lifting.
+  - For now
+#+BEAMER: \pause
+- It's not based on TCP/IP, it's using its own lower-bw protocol. Lightweight
+  Extensible Message Format ([[https://github.com/markqvist/LXMF][LXMF]]) based on [[https://msgpack.org/][msgpack]]
+#+BEAMER: \pause
+- Docs are amazing
+* Reticulum software
+- NomadNet, browser + messaging
+  - Pages use a custom Markdown
+#+BEAMER: \pause
+#+LaTeX:\includegraphics[width = 275pt\textwidth]{nomadnet.jpg}
+* Reticulum software
+- RNSH, for spawning shells over Reticulum
+  - 11.2km shell session!
+#+BEAMER: \pause
+- Mesh with nodes that have no line of sight
+#+LaTeX:\includegraphics[width = 200pt\textwidth]{ret-mesh.jpg}
+* Reticulum software
+- Rnode
+#+BEAMER: \pause
+- [[https://github.com/markqvist/tncattach][tncattach]], allows one to attach KISS TNC devices as network interfaces
+* Reticulum Community
+- Development/discussions happens on GitHub and Matrix
+#+BEAMER: \pause
+- There's also a Public Testnet over TCP/IP and I2P for running experiments
+* Contribute!
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} Contribute! \par
+* Reticulum vs Meshtastic
+- Different end goals
+  - Reticulum is more open-ended and powerful
+  - Meshtastic is more polished and has a smaller scope
+#+BEAMER: \pause
+- ProtoBuffs make it easy to update the protocol and extend it, also porting to
+  new devices
+* Other meshes over LoRa?
+- [[https://github.com/spleenware/ripple][Ripple]]
+* Questions?
+- Feel free to ask me in the corridor sessions ;)
+* Links
+- https://unsigned.io/understanding-lora-parameters/
+- https://wirelesspi.com/understanding-lora-phy-long-range-physical-layer/
+- https://github.com/GUVWAF/Meshtasticator
+- https://meshtastic.org/
+* Links
+- https://reticulum.network/
+- https://github.com/markqvist/RNode_Firmware
+- https://github.com/markqvist/tncattach
+* Bonus Slides
+#+LATEX:\usebeamercolor[fg]{title}\usebeamerfont{title} Bonus Slides \par
+* Notable mesh networks
+- AWMN
+- Freifunk (~1750 routers, ~4k clients)
+- guifi.net (~38k nodes)
+- AREDNet (~7k nodes)
+* Routing on Mesh networks
+- It's a mess ;), more than 70 schemes
+#+BEAMER: \pause
+- Nodes need to have a local routing table
+  - Complex & Resource intensive
+  - Power hungry as well
+#+BEAMER: \pause
+- Nodes might not be stationary
+* Routing loops and other issues
+#+LaTeX:\includesvg[width=270pt]{routing-loop-1}
+* Routing loops and other issues
+#+LaTeX:\includesvg[width=270pt]{routing-loop-2}
+* Routing loops and other issues
+#+LaTeX:\includesvg[width=270pt]{routing-signal-strength}
+* Routing on Mesh networks
+- Routing schemes:
+  - DVR (Distance (hops) Vector Routing)
+  - DSDV (Destination Sequenced Distance-Vector Routing)
+  - DSR (Dynamic Source Routing)
