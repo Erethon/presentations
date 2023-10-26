@@ -1,0 +1,9 @@
+* Presentations I've given in public
+** What is this?
+A list of talks/presentations I've given in a public setting/conferences.
+
+** List
+| Conf         | Subject                 | Slides | Relative link                     |
+|--------------+-------------------------+--------+-----------------------------------|
+| [[https://2023.fosscomm.gr/en/][FOSSCOMM2023]] | Mesh networks over LoRa | [[https://f.erethon.com/mesh2023.pdf][PDF]]    | fosscomm2023/meshnetworkslora.pdf |
+|--------------+-------------------------+--------+-----------------------------------|
