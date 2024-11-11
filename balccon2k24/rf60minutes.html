@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Around the RF world in 60 minutes</title>
+<meta name="author" content="Dionysis Grigoropoulos"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="../reveal.js/dist/theme/white-contrast.css" id="theme"/>
+
+<link rel="stylesheet" href="../css/erethon.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h3> Around the RF world in 60 minutes </h3> <h4> Dionysis Grigoropoulos </h4> <p> BalCCon 2k24 <p> Slides: <a href="https://f.erethon.com/balccon2k24">https://f.erethon.com/balccon2k24</a><p> <img src="qr.svg">
+</section>
+
+
+<section>
+<section id="slide-org854ecb9">
+<h2 id="org854ecb9">Who am I</h2>
+<ul>
+<li>Dionysis Grigoropoulos (dgrig or Erethon)</li>
+<li><a href="https://erethon.com">https://erethon.com</a></li>
+<li>SRE by trade, hackerman at heart</li>
+
+</ul>
+<hr />
+<ul>
+<li>email: dgrig@erethon.com</li>
+<li>matrix: @dgrig:erethon.com</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgc82a99d">
+<h3 id="orgc82a99d">Radiowaves</h3>
+<p class="fragment">
+A fascinating and invisible world around us
+</p>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-org3171674">
+<h2 id="org3171674">What is RF and RadioWaves</h2>
+
+<div id="orgeb6a327" class="figure">
+<p><img src="yeah-science.webp" alt="yeah-science.webp" width="50%" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgbf6c158">
+<h3 id="orgbf6c158">Electromagnetic Radiation and Radio Waves</h3>
+<aside class="notes">
+<p>
+Marconi had trouble obtaining patents because his systems infringed patents of
+others, including two of Tesla's for wireless power transmission.
+</p>
+
+</aside>
+<ul>
+<li>Theorized by James Clark Maxwell in 1865
+<ul>
+<li>Maxwell's equations</li>
+
+</ul></li>
+<li>Demonstrated in 1887 by Heinrich Hertz</li>
+<li>First practical application in 1894 by Guglielmo Marconi</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org181d548">
+<h3 id="org181d548">Electromagnetic Radiation and Radio Waves</h3>
+<aside class="notes">
+<p>
+There's a classical way to view EMR and a quantum version of it, I'll stick to
+the classical one, because as I said, I'm not a physicist.
+</p>
+
+<p>
+EM field: Electric field and magnetic field
+</p>
+
+</aside>
+<ul>
+<li>Electromagnetic Radiation: Waves of electromagnetic fields propagating through
+space
+<ul>
+<li>Synchronized <b>oscillations</b> of electric and magnetic fields</li>
+
+</ul></li>
+
+</ul>
+<ul class="fragment">
+<li>Oscillations means Alternating Current (AC)
+<ul>
+<li>We apply this current at an antenna</li>
+
+</ul></li>
+
+</ul>
+<ul class="fragment">
+<li>Propagating at the speed of light (c) in a vacuum</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgceb2393">
+<h3 id="orgceb2393">Electromagnetic Radiation and Radio Waves</h3>
+<aside class="notes">
+<p>
+Bandwidth of a signal is the difference between the highest and the lowest
+frequency of a signal
+</p>
+
+</aside>
+<ul>
+<li>Frequency, measured in Hertz (Hz)</li>
+
+</ul>
+<ul class="fragment">
+<li>Wavelength, measured in meters</li>
+
+</ul>
+<p class="fragment">
+λ = υ/f
+</p>
+<ul class="fragment">
+<li>As the frequency increases, the wavelength decreases</li>
+
+</ul>
+<ul class="fragment">
+<li>Bandwidth</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgb03aa68">
+<h3 id="orgb03aa68">Electromagnetic and Radio Spectrum</h3>
+
+<div id="orgafddd38" class="figure">
+<p><img src="EM_spectrum_updated.svg.png" alt="EM_spectrum_updated.svg.png" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgb8be69e">
+<h3 id="orgb8be69e">Electromagnetic and Radio Spectrum</h3>
+
+<div id="org2c4ea13" class="figure">
+<p><img src="spectrum-radio.png" alt="spectrum-radio.png" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orged061d4">
+<h3 id="orged061d4">Electromagnetic and Radio Spectrum</h3>
+<aside class="notes">
+<p>
+Different band names by region, it's common to use the wavelength or the usage
+of the band, i.e. 2m band or air band.
+</p>
+
+</aside>
+<ul class="fragment">
+<li>We split up the spectrum in bands based on frequency/wavelength</li>
+
+</ul>
+<ul class="fragment">
+<li>Non-ionizing radiation</li>
+<li>It doesn't have enough energy to remove electrons from atoms or molecules</li>
+<li>Can potentially heat tissue though at very large power levels</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-org7802e0a">
+<h2 id="org7802e0a">Spectrogram</h2>
+<ul class="fragment">
+<li>Visualization of spectrum of frequencies over time</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgd9b7be5">
+<h3 id="orgd9b7be5">Spectrogram</h3>
+
+<div id="orgdfe8220" class="figure">
+<p><img src="gqrx-spectrum.jpg" alt="gqrx-spectrum.jpg" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgbd67bb4">
+<h3 id="orgbd67bb4">Spectrogram</h3>
+
+<div id="orgb4b8c9e" class="figure">
+<p><img src="gqrx-spectrum-2.jpg" alt="gqrx-spectrum-2.jpg" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orge55a6b2">
+<h3 id="orge55a6b2">Spectrogram</h3>
+
+<div id="org7d515f2" class="figure">
+<p><img src="inspectrum.jpg" alt="inspectrum.jpg" width="75%" />
+</p>
+</div>
+<p class="fragment">
+What happens if these two signals overlap?
+</p>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-orgb0af930">
+<h2 id="orgb0af930">The spectrum is a "Finite Resource"</h2>
+<aside class="notes">
+<p>
+Initially called International Telegraph Union, nowadays it's International
+Telecommunication Union
+</p>
+
+<p>
+Countries view spectrum as an exclusive property of the state. Read up on
+Spectrum Commons theory. In 1910 the US Navy attempted to regulate RF.
+</p>
+
+<p>
+Helenic Telecommunications &amp; post commissions. Yes, post, notice a pattern?
+</p>
+
+</aside>
+<ul class="fragment">
+<li>ITU established in 1865, became part of UN in 1947</li>
+
+</ul>
+<ul class="fragment">
+<li>Publishes the ITU Radio Regulations
+<ul>
+<li>It's an International Law that countries follow and enforce</li>
+<li>Regulates the 9 kHz to 300GHz spectrum</li>
+
+</ul></li>
+
+</ul>
+
+<ul class="fragment">
+<li>ΕΕΤΤ in Greece, RATEL in Serbia, FCC in USA, etc</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgce2b0bf">
+<h3 id="orgce2b0bf">Legality of radio equipment</h3>
+<ul>
+<li>Varies wildly by country</li>
+<li>Consult your local laws</li>
+
+</ul>
+<ul class="fragment">
+<li>Very blurry situation nowadays since the laws haven't kept up with technology</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgfa6980a">
+<h3 id="orgfa6980a">How does one transmit then?</h3>
+<ul class="fragment">
+<li>You pay for the right to transmit (TV Stations, Mobile Carriers, etc)</li>
+
+</ul>
+<ul class="fragment">
+<li>You get licensed as a Radio Amateur operator in your country</li>
+
+</ul>
+<ul class="fragment">
+<li>Your line of work or other reasons allow you to (Firefighters, boats, etc)</li>
+
+</ul>
+<ul class="fragment">
+<li>You transmit in a part of the spectrum that's free for everyone to use (under conditions)</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6e316e8">
+<h2 id="org6e316e8">ISM Bands</h2>
+<aside class="notes">
+<p>
+Spectrum is expensive, companies try to take control of parts of it all the time
+</p>
+
+</aside>
+<ul class="fragment">
+<li>Introduced during the 1940s because of microwave heating</li>
+
+</ul>
+<ul class="fragment">
+<li>Reserved for Industrial, Scientific, Medical purposes only, no
+telecommunications allowed</li>
+
+</ul>
+<ul class="fragment">
+<li>However, most electronic devices use these bands nowdays</li>
+<li>NFC, WiFi, BT, ZigBee, LoRa, 433/868 keyfobs, etc</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-org4eb34ac">
+<h2 id="org4eb34ac">Modulation of signals</h2>
+<ul>
+<li>Information must be encoded in a carrier signal that is suitable for
+transmitting</li>
+
+</ul>
+
+<div id="org614f12b" class="figure">
+<p><img src="Amfm3-en-de.gif" alt="Amfm3-en-de.gif" width="60%" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orge69de70">
+<h3 id="orge69de70">Modulation of signals</h3>
+<aside class="notes">
+<p>
+Mention spread spectrum and chirp
+</p>
+
+</aside>
+<ul>
+<li>Multiple modulation exist, from simple ones, to very complex and even proprietary ones</li>
+
+</ul>
+
+<div id="orgf8cf5c4" class="figure">
+<p><img src="inspectrum-lora.jpg" alt="inspectrum-lora.jpg" height="200%" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org30a8dbe">
+<h2 id="org30a8dbe">Antennas</h2>
+<ul>
+<li>Antennas come in all shapes and sizes</li>
+
+</ul>
+<ul class="fragment">
+<li>Size depends on the frequency (wavelength) of signal
+<ul>
+<li>Bluetooth, WiFi, etc, 2.4GHz -&gt; 12.5cm</li>
+<li>Analog FM broadcasting, 87-108MHz -&gt; 3m</li>
+<li>ELF, 3-3KHz -&gt; ~100000-100km</li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orgccd4d24">
+<h3 id="orgccd4d24">Antennas</h3>
+
+<div id="org785ef22" class="figure">
+<p><img src="lycabettus.jpeg" alt="lycabettus.jpeg" width="30%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org21a4dc9">
+<h3 id="org21a4dc9">Antennas</h3>
+
+<div id="orgd1d3156" class="figure">
+<p><img src="sigrou.jpeg" alt="sigrou.jpeg" width="50%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org2ffcff8">
+<h3 id="org2ffcff8">Antennas</h3>
+
+<div id="orgc64d66c" class="figure">
+<p><img src="bbc.jpeg" alt="bbc.jpeg" width="50%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org1497250">
+<h3 id="org1497250">Antennas</h3>
+
+<div id="orgb17ca11" class="figure">
+<p><img src="dome.jpeg" alt="dome.jpeg" width="50%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org1904af3">
+<h3 id="org1904af3">Antennas</h3>
+
+<div id="org82abe9d" class="figure">
+<p><img src="24ghzantenna.jpeg" alt="24ghzantenna.jpeg" width="75%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org36f8a53">
+<h3 id="org36f8a53">Antennas</h3>
+
+<div id="org8f99f1c" class="figure">
+<p><img src="24ghzantenna-2.jpeg" alt="24ghzantenna-2.jpeg" width="75%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org05eaac2">
+<h2 id="org05eaac2">Exploring and capturing this world</h2>
+<aside class="notes">
+<p>
+Mention that this is a great area to fuzz and look for exploits. Prior research
+on this from Matt Knight.
+</p>
+
+</aside>
+
+<div id="org1f433e9" class="figure">
+<p><img src="warning-wikimedia.svg" alt="warning-wikimedia.svg" class="fragment" />
+</p>
+</div>
+<ul class="fragment">
+<li>Radiowaves are the definition of untrusted input!</li>
+
+</ul>
+<ul class="fragment">
+<li>Lots of radio related software is not written in memory safe languages or with
+security in mind</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org3c5000a">
+<h3 id="org3c5000a">Hardware</h3>
+<ul>
+<li>Hardware that's built to receive and/or transmit signals of specific
+frequencies and modulation(s)</li>
+
+</ul>
+<ul class="fragment">
+<li>Usually locked down, communicate with it via a higher level interface</li>
+<li>Bluetooth, WiFi, ZigBee, LoRa, CC1110, CC2531, etc</li>
+
+</ul>
+<ul class="fragment">
+<li>Software Defined Radio</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org9c90a66">
+<h3 id="org9c90a66">Software Defined Radio</h3>
+<aside class="notes">
+<p>
+Quick historic intro on how everything was done on hardware and that it was
+expensive. PC capabilities got better over time.
+</p>
+
+</aside>
+<ul class="fragment">
+<li>The hardware is now "dumb" and only captures the analog signal of the carrier,
+digitizes it and passes it to software on the computer.</li>
+
+</ul>
+<ul class="fragment">
+<li>The computer then does all the "smart" and computational heavy processes, like demodulation, decoding,
+etc.</li>
+
+</ul>
+<ul class="fragment">
+<li>Works on smartphones&#x2026;</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org0e2185c">
+<h3 id="org0e2185c">A revolution in cost and accessibility</h3>
+<aside class="notes">
+<p>
+Early examples of SDR in 1988 and later in the 1990s
+</p>
+
+<p>
+Antti Palosaari, Eric Fry, Osmocom (in particular Steve Markgraf)
+via <a href="https://www.rtl-sdr.com/about-rtl-sdr/">https://www.rtl-sdr.com/about-rtl-sdr/</a>
+</p>
+
+<p>
+Nowadays we've got a lot more options, HackRF, SDRPlay, ADALM-Pluto, USRP, etc
+</p>
+
+</aside>
+<ul class="fragment">
+<li>RTL-SDR, a driver for a cheap (20-30$) USB digital TV receiver</li>
+
+</ul>
+
+<div id="orgd998da3" class="figure">
+<p><img src="eztv6452.jpg" alt="eztv6452.jpg" width="50%" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org2ff33cb">
+<h3 id="org2ff33cb">Software</h3>
+<ul class="fragment">
+<li><code>GNU Radio</code> is the golden standard, but requires lots of know-how</li>
+
+</ul>
+
+<div id="orgb1d2b19" class="figure">
+<p><img src="gnuradio-fsk.jpg" alt="gnuradio-fsk.jpg" width="75%" class="fragment" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org8aab225">
+<h3 id="org8aab225">Software</h3>
+<ul>
+<li>gqrx, CubicSDR, etc</li>
+
+</ul>
+
+<div id="org0c5a777" class="figure">
+<p><img src="gqrx.jpg" alt="gqrx.jpg" width="95%" />
+</p>
+</div>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-org07fa607">
+<h3 id="org07fa607">Software</h3>
+<ul>
+<li><code>Inspectrum</code> and <code>Universal Radio Hacker</code> for inspecting and reverse engineering
+signals</li>
+<li><code>rtl_433</code> for decoding a lot of cheap sensors</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+<section id="slide-orga5898e5">
+<h3 id="orga5898e5">"Gamified"/handheld solutions</h3>
+<ul>
+<li><code>Flipper Zero</code></li>
+<li><code>HackRF</code> with a <code>portapack</code></li>
+<li><code>Pwnagotchi</code></li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge8a9b84">
+<h2 id="orge8a9b84">Privacy</h2>
+<ul>
+<li>Finally!</li>
+
+</ul>
+<ul class="fragment">
+<li>Most of our electronic devices are transmitting some kind of signal nowadays
+(on purpose)</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+</section>
+<section id="slide-org9602466">
+<h3 id="org9602466">WiFi</h3>
+</section>
+<section id="slide-orgf5d761c">
+<h3 id="orgf5d761c">Bluetooth</h3>
+</section>
+<section id="slide-org1d5632d">
+<h3 id="org1d5632d">NFC, CCs, passports, IDs</h3>
+</section>
+<section id="slide-orgfe4a497">
+<h3 id="orgfe4a497">Smart Homes</h3>
+</section>
+<section id="slide-org908fd28">
+<h3 id="org908fd28">ZigBee</h3>
+</section>
+<section id="slide-org0862dae">
+<h3 id="org0862dae">Smart appliances, bluetooth toothbrush</h3>
+</section>
+<section id="slide-orgf335588">
+<h3 id="orgf335588">rf54nl, Lino's Keyboard</h3>
+</section>
+<section id="slide-orgcc3bf18">
+<h3 id="orgcc3bf18">Tire pressure sensors</h3>
+</section>
+<section id="slide-org5bc1cef">
+<h3 id="org5bc1cef">RTL 433, weather stations</h3>
+</section>
+<section id="slide-orgb0712fb">
+<h3 id="orgb0712fb">RFID 900 ISO18000-6c</h3>
+</section>
+<section id="slide-org3ca3f47">
+<h3 id="org3ca3f47">902 - 928 Smart meters, recessim</h3>
+</section>
+<section id="slide-org8bc50cb">
+<h3 id="org8bc50cb">GSM</h3>
+</section>
+</section>
+<section>
+<section id="slide-orge4e57fa">
+<h2 id="orge4e57fa">ZigBee</h2>
+<ul>
+<li>2.400MHz - 2.4835Mhz</li>
+<li>16 channels</li>
+<li>2MHz BW, 5MHz apart</li>
+<li>Trust on first use</li>
+<li><a href="https://www.nxp.com/docs/en/supporting-information/MAXSECZBNETART.pdf">https://www.nxp.com/docs/en/supporting-information/MAXSECZBNETART.pdf</a></li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-org395ba39">
+<h2 id="org395ba39">BLE</h2>
+<ul>
+<li>40 channels, 37 used for data, 3 used for advertisements</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-orgbfee092">
+<h2 id="orgbfee092">LoRa</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga99edb1">
+<h2 id="orga99edb1"><span class="todo TODO">TODO</span> Research if iPhones flood random Bluetooth BSSIDs</h2>
+</section>
+</section>
+<section>
+<section id="slide-org036b0e8">
+<h2 id="org036b0e8">Notes</h2>
+<div class="outline-text-2" id="text-org036b0e8">
+</div>
+</section>
+<section id="slide-org1efec65">
+<h3 id="org1efec65">Jokes</h3>
+<ul>
+<li>Remember, it's not hoarding if it's organized</li>
+<li>Look at me, I'm the keyboard now</li>
+<li>TPM reports</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgeecdbc0">
+<h2 id="orgeecdbc0">AirTags</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga7b6359">
+<h2 id="orga7b6359">IoT Smart Cities</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgaa7a0a2">
+<h2 id="orgaa7a0a2">Mesh4G in the UK</h2>
+</section>
+</section>
+<section>
+<section id="slide-org436c46d">
+<h2 id="org436c46d">Physics</h2>
+<div class="outline-text-2" id="text-org436c46d">
+</div>
+</section>
+<section id="slide-org153a5a9">
+<h3 id="org153a5a9">Electromagnetic fields</h3>
+<p>
+When current passes through a conductor, it generates an electromagnetic field
+around it. This field propagates in space.
+</p>
+<ul>
+<li>Wavelength = c / f
+<ul>
+<li>300000000 / 1</li>
+<li>300000000 / 24000000000 = 0.125m</li>
+<li>300000000 / 90000000 = 3.33m
+<ul>
+<li>This is why phones require headphones to pick up radio stations</li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+<section>
+<section id="slide-orga529fdb">
+<h2 id="orga529fdb">Out of topic but interesting</h2>
+<ul>
+<li>Radio waves of the universe</li>
+<li>Radio telescopes</li>
+
+</ul>
+<div class="slide-footer">https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos</div>
+</section>
+</section>
+</div>
+</div>
+<script src="../reveal.js/dist/reveal.js"></script>
+<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../reveal.js/plugin/notes/notes.js"></script>
+<script src="../reveal.js/plugin/search/search.js"></script>
+<script src="../reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+margin: 0.10,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

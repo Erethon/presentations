@@ -1,0 +1,464 @@
+#+TITLE: Around the RF world in 60 minutes
+#+AUTHOR: Dionysis Grigoropoulos
+#+EMAIL: dgrig@erethon.com
+#+DATE:  2024-09-21
+#+REVEAL_TITLE_SLIDE: <h3> %t </h3> <h4> %a </h4> <p> %m <p> Slides: <a href="%u">%u</a><p> <img src="%q">
+#+LANGUAGE:  en
+#+OPTIONS: toc:nil num:nil
+#+OPTIONS: reveal_slide_number:nil
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_THEME: white-contrast
+#+REVEAL_SLIDE_FOOTER: https://f.erethon.com/balccon2k24 | Around the RF world in 60 minutes | Dionysis Grigoropoulos
+#+REVEAL_EXTRA_CSS: ../css/erethon.css
+#+REVEAL_TRANS: none
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_TALK_URL: https://f.erethon.com/balccon2k24
+#+REVEAL_TALK_QR_CODE: qr.svg
+#+REVEAL_MISCINFO: BalCCon 2k24
+
+* Who am I
+- Dionysis Grigoropoulos (dgrig or Erethon)
+- https://erethon.com
+- SRE by trade, hackerman at heart
+------------------------------------
+- email: dgrig@erethon.com
+- matrix: @dgrig:erethon.com
+- SV1TBT amateur radio callsign
+** Radiowaves
+A fascinating and invisible world around us
+* What is RF and RadioWaves
+#+ATTR_REVEAL: :frag t
+#+attr_html: :width 50%
+[[file:yeah-science.webp]]
+** Electromagnetic Radiation and Radio Waves
+#+BEGIN_NOTES
+There's a classical way to view EMR and a quantum version of it, I'll stick to
+the classical one, because as I said, I'm not a physicist.
+
+EM field: Electric field and magnetic field
+#+END_NOTES
+- Electromagnetic Radiation: Waves of electromagnetic fields propagating through
+  space
+   - Synchronized *oscillations* of electric and magnetic fields
+   - Propagating at the speed of light (c) in a vacuum
+#+ATTR_REVEAL: :frag t
+- We apply this current at an antenna
+** Electromagnetic Radiation and Radio Waves
+#+BEGIN_NOTES
+Marconi had trouble obtaining patents because his systems infringed patents of
+others, including two of Tesla's for wireless power transmission.
+#+END_NOTES
+- Theorized by James Clark Maxwell in 1865
+  - Maxwell's equations
+- Demonstrated in 1887 by Heinrich Hertz
+- First practical application in 1894 by Guglielmo Marconi
+** Electromagnetic Radiation and Radio Waves
+#+BEGIN_NOTES
+Bandwidth of a signal is the difference between the highest and the lowest
+frequency of a signal
+#+END_NOTES
+- Frequency, measured in Hertz (Hz)
+#+ATTR_REVEAL: :frag t
+- Wavelength, measured in meters
+#+ATTR_REVEAL: :frag t
+λ = υ/f
+#+ATTR_REVEAL: :frag t
+- As the frequency increases, the wavelength decreases
+** Electromagnetic and Radio Spectrum
+[[file:EM_spectrum_updated.svg.png]]
+** Electromagnetic and Radio Spectrum
+#+BEGIN_NOTES
+Different band names by region, it's common to use the wavelength or the usage
+of the band, i.e. 2m band or air band.
+
+Non-ionizing radiation
+#+END_NOTES
+[[file:spectrum-radio.png]]
+** Noise floor
+#+BEGIN_NOTES
+Noise floor might be because of receiver limitations
+
+There was a talk on the first day by Goran on EMI (Electromagnetic
+intereference) https://cfp.balccon.org/balccon2k24-2024/talk/ZMDMV7/
+
+Analogy to a noisy bar
+#+END_NOTES
+- Cosmic background radiation, noise from electronics, thermal radiation, etc
+#+ATTR_REVEAL: :frag t
+[[file:noisefloor.jpg]]
+* The spectrum is a "Finite Resource"
+#+BEGIN_NOTES
+Initially called International Telegraph Union, nowadays it's International
+Telecommunication Union
+
+Countries view spectrum as an exclusive property of the state. Read up on
+Spectrum Commons theory. In 1910 the US Navy attempted to regulate RF.
+
+Helenic Telecommunications & post commissions. Yes, post, notice a pattern?
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- ITU established in 1865, became part of United Nations in 1947
+#+ATTR_REVEAL: :frag t
+- Publishes the ITU Radio Regulations
+  - It's an International Law that countries follow and enforce
+  - Regulates the 9 kHz to 300GHz spectrum
+
+#+ATTR_REVEAL: :frag t
+- ΕΕΤΤ in Greece, RATEL in Serbia, FCC in USA, etc
+** Legality of radio equipment
+#+BEGIN_NOTES
+During Nazi occupation of Greece, the Nazis took control of the Greek radio
+station and locked receivers to only listen to that frequency with big fines for
+non-compliant receivers.
+#+END_NOTES
+- Varies wildly by country
+- Consult your local laws
+#+ATTR_REVEAL: :frag t
+- Very blurry situation nowadays since the laws haven't kept up with technology
+** How does one transmit then?
+#+ATTR_REVEAL: :frag t
+- You pay for the right to transmit (TV Stations, Mobile Carriers, etc)
+#+ATTR_REVEAL: :frag t
+- You get licensed as a Radio Amateur operator in your country
+#+ATTR_REVEAL: :frag t
+- Your line of work or other reasons allow you to (Firefighters, boats, etc)
+#+ATTR_REVEAL: :frag t
+- You transmit in a part of the spectrum that's free for everyone to use (under conditions)
+
+* ISM Bands
+#+BEGIN_NOTES
+Spectrum is expensive, companies try to take control of parts of it all the time
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- Introduced during the 1940s because of microwave heating
+#+ATTR_REVEAL: :frag t
+- Reserved for Industrial, Scientific, Medical purposes only, no
+  telecommunications allowed
+#+ATTR_REVEAL: :frag t
+- However, most electronic devices use these bands nowdays
+- NFC, WiFi, BT, ZigBee, LoRa, 433/868 keyfobs, etc
+* Antennas
+#+BEGIN_NOTES
+40k circumferance of earth
+#+END_NOTES
+- Antennas come in all shapes and sizes
+#+ATTR_REVEAL: :frag t
+- Size depends on the frequency (wavelength) of signal
+  - Bluetooth, WiFi, etc, 2.4GHz -> 12.5cm
+  - Analog FM broadcasting, 87-108MHz -> 3m
+  - Submarine, 76Hz -> ~4.000km
+** Antennas
+#+attr_html: :width 30%
+[[file:lycabettus.jpeg]]
+** Antennas
+#+attr_html: :width 50%
+[[file:gsmnovisad.jpeg]]
+** Antennas
+#+attr_html: :width 75%
+[[file:bbc.jpeg]]
+** Antennas
+#+attr_html: :width 50%
+[[file:dome.jpeg]]
+** Antennas
+#+attr_html: :width 70%
+[[file:rfidbelgrade.jpeg]]
+** Antennas
+#+attr_html: :width 75%
+[[file:24ghzantenna.jpeg]]
+** Antennas
+#+attr_html: :width 75%
+[[file:24ghzantenna-2.jpeg]]
+
+* Exploring and capturing this world
+#+BEGIN_NOTES
+Mention that this is a great area to fuzz and look for exploits. Prior research
+on this from Matt Knight.
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+[[file:warning-wikimedia.svg]]
+#+ATTR_REVEAL: :frag t
+- Radiowaves are the definition of untrusted input!
+#+ATTR_REVEAL: :frag t
+- Lots of radio related software is not written in memory safe languages or with
+  security in mind
+** Hardware
+- Hardware that's built to receive/transmit signals of specific
+  frequencies and modulations
+  - Usually locked down, communicate with it via a higher level interface
+  - Bluetooth, WiFi, ZigBee, LoRa, CC1110, CC2531, etc
+** Hardware
+#+attr_html: :width 50%
+[[file:ttgo.jpeg]]
+
+** Software Defined Radio
+#+BEGIN_NOTES
+Quick historic intro on how everything was done on hardware and that it was
+expensive. PC capabilities got better over time.
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- The hardware is now "dumb" and only captures the analog signal of the carrier,
+  digitizes it and passes it to software on the computer.
+#+ATTR_REVEAL: :frag t
+- The computer then does all the "smart" and computational heavy processes, like demodulation, decoding,
+  etc.
+#+ATTR_REVEAL: :frag t
+- Works on smartphones...
+** A revolution in cost and accessibility
+#+BEGIN_NOTES
+Early examples of SDR in 1988 and later in the 1990s
+
+Antti Palosaari, Eric Fry, Osmocom (in particular Steve Markgraf)
+via https://www.rtl-sdr.com/about-rtl-sdr/
+
+Nowadays we've got a lot more options, HackRF, SDRPlay, ADALM-Pluto, USRP, etc
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- RTL-SDR, a driver for a cheap (20-30$) USB digital TV receiver
+#+ATTR_REVEAL: :frag t
+#+attr_html: :width 50%
+[[file:eztv6452.jpg]]
+** Software
+#+ATTR_REVEAL: :frag t
+- =GNU Radio= is the golden standard, but requires lots of know-how
+#+ATTR_REVEAL: :frag t
+#+attr_html: :width 75%
+[[file:gnuradio-fsk.jpg]]
+** Software
+- SDR++, gqrx, CubicSDR, etc
+#+attr_html: :width 90%
+[[file:gqrx.jpg]]
+** Software
+- =Inspectrum= and =Universal Radio Hacker= for inspecting and reverse engineering
+  signals
+- =rtl_433= for decoding a lot of cheap sensors/protocols (263 currently)
+
+** "Gamified"/handheld solutions
+- =Flipper Zero=
+#+attr_html: :width 50%
+[[file:flipper.jpeg]]
+** "Gamified"/handheld solutions
+- Smartphone works just fine
+#+attr_html: :width 75%
+[[file:smartphone.jpeg]]
+- =HackRF= with a =portapack=
+* Privacy
+#+BEGIN_NOTES
+Telecommunications Electronics Materials Protected from Emanating Spurious
+Transmissions, NSA codename and NATO specification
+
+Kraken SDR, triangulation, correlative interferometry
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- Most electronic devices transmit some kind of signal (on purpose)
+#+ATTR_REVEAL: :frag t
+- TEMPEST is out of topic
+#+ATTR_REVEAL: :frag t
+- Transmitting == can be located
+#+ATTR_REVEAL: :frag t
+- Security, not privacy
+
+** Cellular
+- The elephant in the room
+#+ATTR_REVEAL: :frag t
+- Most of us carry a cellular device with us
+#+ATTR_REVEAL: :frag t
+- Not the easiest signal to capture
+** Bluetooth
+#+BEGIN_NOTES
+- BR/EDR (Basic Rate / Enhanced Data Rate)
+- 40 channels, 37 used for data, 3 used for advertisements
+- BSSID, Basic Service Set Identifier
+- Coded Phy for Long Range
+- H1 half a billion of transistors, H2 a billion
+#+END_NOTES
+- Classic Bluetooth in 1998, 4.0 (BLE) in 2011, 4.2 in late 2014, 5.0 in 2016
+#+ATTR_REVEAL: :frag t
+- Some privacy protections exist since 4.2, but devices fail to properly use
+  them
+*** Bluetooth devices
+#+BEGIN_NOTES
+- H1 half a billion of transistors, H2 a billion
+#+END_NOTES
+- Practically everywhere today
+#+ATTR_REVEAL: :frag t
+#+attr_html: :width 50%
+[[file:toothbrush.jpg]]
+#+ATTR_REVEAL: :frag t
+- Toothbrushes
+** WiFi
+- Similar issues as Bluetooth
+  BSSID uniquely identifies a device
+#+ATTR_REVEAL: :frag t
+- MAC Address randomization helps somewhat
+#+ATTR_REVEAL: :frag t
+- Wigle.net, Google and others are tracking Access Points.
+  - Cameras often setup an AP
+** RFID
+#+BEGIN_NOTES
+Tickets, Passports/IDs, tollway passes, access controls for buildings
+
+Talk by Nip earlier in the day, last year's talk by Nemanja
+
+Radio Frequency Identification
+
+Kristin Paget has done amazing work on this in the past
+#+END_NOTES
+- RFID tags are used for access control, sharing information, anti-theft
+  devices, athlete identification, etc.
+#+ATTR_REVEAL: :frag t
+- Three major versions: 125kHz, 13.56MHz, ~868/900MHz
+#+ATTR_REVEAL: :frag t
+- Easy to detect from a distance, hard to protect against.
+*** RFID
+#+attr_html: :width 35%
+[[file:ticket.jpg]]
+*** RFID
+#+attr_html: :width 35%
+[[file:ticket-rfid.jpg]]
+** Drones
+#+BEGIN_NOTES
+European Union Aviation Safety Agency
+Federal Aviation Administration
+Open Drone ID on GitHub
+#+END_NOTES
+- RemoteID required by EASA & FAA since 1/1/2024
+#+ATTR_REVEAL: :frag t
+- WiFi and Bluetooth Long Range, can be received by smartphones
+#+ATTR_REVEAL: :frag t
+- SDR projects for decoding popular alternatives
+** Cars
+#+BEGIN_NOTES
+V2Device, V2Grid, V2Home, V2Cloud, V2Infrastructure (traffic lights, parking
+meters), V2V, V2Pedestrians
+- OBD: On-board diagnostics
+- firmware updates for a car feels weird to me
+#+END_NOTES
+#+ATTR_REVEAL: :frag t
+- V2X, vehicle to everything
+#+ATTR_REVEAL: :frag t
+- Bluetooth (multiple devices)
+#+ATTR_REVEAL: :frag t
+- RFID for tollways/parking/access
+#+ATTR_REVEAL: :frag t
+- Cellular for safety and firmware updates
+*** Cars - TPMS
+#+BEGIN_NOTES
+Some use RFID, but a lot aren't
+#+END_NOTES
+#+attr_html: :width 50%
+[[file:TPMS_warning_icon.svg.png]]
+#+ATTR_REVEAL: :frag t
+- Tire Pressure Monitoring System
+*** Cars - TPMS
+#+BEGIN_NOTES
+Important things to note here are the ID that uniquelly identifies the
+sensor/tire and also the acceleration metric
+#+END_NOTES
+#+begin_src
+{
+  "time": "2024-09-17 06:16:32",
+  "model": "Renault-0435R",
+  "type": "TPMS",
+  "id": "fafe00",
+  "flags": "c0",
+  "pressure_kPa": 249.333,
+  "temperature_C": 36.000,
+  "centrifugal_acc": 70.000,
+  "mic": "CRC",
+  "has_tick": 0,
+  "tick": -128
+}
+#+end_src
+** Smart Home
+#+BEGIN_NOTES
+- 2.400MHz - 2.4835Mhz
+- 16 channels
+- 2MHz BW, 5MHz apart
+- Trust on first use
+- rtl_433 has json output, also has influxdb output, because if it's organized
+  it's not hoarding
+#+END_NOTES
+- Multiple different protocols and approaches in interconnecting appliances
+#+ATTR_REVEAL: :frag t
+- ZigBee
+  - Extremely popular for sensors and buttons
+#+ATTR_REVEAL: :frag t
+- 433/868/900MHz
+  - Doorbells, temperature sensors, smart plugs, blinds
+* Smart Cities
+** Smart Power Meters
+#+BEGIN_NOTES
+- AMI, Advanced Metering Infrastructure
+
+- Recessim has done a lot of work on reverse engineering some that are used in
+  the US. https://wiki.recessim.com/view/Main_Page
+
+- 80% rollout in EU by 2020 failed, some countries are catching up, others like
+  Greece have given up on it.
+
+- Some use a central collector to collect and forward measurements. Some models
+  even use Windows installed in SSDs.
+#+END_NOTES
+- Modern power meters are RF capable, part of the smart city
+#+ATTR_REVEAL: :frag t
+- WiFi, custom protocols, ZigBee, LoRa, mesh protocols
+#+ATTR_REVEAL: :frag t
+- Data granularity of readings is very important for privacy
+** Cars and Pedestrians
+#+BEGIN_NOTES
+http://web.archive.org/web/20150131104156/http://traffic.houstontranstar.org/bluetooth/transtar_bluetooth.html
+
+- AWAM: Anonymous Wireless Address Matching
+
+- Started out as an idea in Houston and Texas A&M University Transportation
+  Institute
+- Multiple different names for this technology, Bluetooth Journey Time is a common one
+#+END_NOTES
+- Tracked by the state for calculating road traffic and mobility of people
+#+ATTR_REVEAL: :frag t
+#+begin_src
+Users who have privacy concerns are also able to turn off
+the Bluetooth discovery function of their device which
+prevents it from being read by AWAM at all.
+#+end_src
+#+ATTR_REVEAL: :frag t
+- Rich industry that seems very localized
+** Cars and Pedestrians
+#+attr_html: :width 90%
+[[file:bt-map.jpg]]
+
+* Conclusion
+#+BEGIN_NOTES
+- This is not science fiction
+
+- At the beginning we said that the RF world is invisible. Because of this, it's
+  hard to understand when and how much we've been using RF in our daily
+  lives. In the past we worried a lot about surveillance through cameras, I
+  think it's time we understand how much of our privacy we're giving away in the
+  name of wireless convenience.
+#+END_NOTES
+- Wireless technologies (RF) have permeated daily life and have increased
+  technological complexity
+- It's a battle of privacy vs convenience
+* Thank you - Questions?
+- email: dgrig@erethon.com
+- matrix: @dgrig:erethon.com
+[[file:qr.svg]]
+* Bonus slides
+- Information must be encoded in a carrier signal that is suitable for
+  transmitting
+#+attr_html: :width 60%
+[[file:Amfm3-en-de.gif]]
+
+* Spectrogram
+#+ATTR_REVEAL: :frag t
+Visualization of spectrum of frequencies over time
+** Spectrogram
+[[file:gqrx-spectrum.jpg]]
+** Spectrogram
+[[file:gqrx-spectrum-2.jpg]]
+** Spectrogram
+#+attr_html: :width 75%
+[[file:inspectrum.jpg]]
+#+ATTR_REVEAL: :frag t
+What happens if these two signals overlap?

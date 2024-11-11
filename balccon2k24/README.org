@@ -1,0 +1,6 @@
+* BalCCon2k24
+This is a presentation I gave during [[https://2k24.balccon.org/index.php?title=Main_Page][BalCCon2k24]] about RF and privacy. The
+compiled slides can be found [[https://f.erethon.com/balccon2k24/][here]], while this directory contains the sources for
+the slides.
+
+A recording of the talk is available [[https://www.youtube.com/watch?v=tu-ei6OnbhE][here]].

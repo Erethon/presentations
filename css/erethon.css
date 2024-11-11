@@ -1,0 +1,18 @@
+.slide-footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.reveal > .slides > section > section {
+  transform-style: flat;
+}
